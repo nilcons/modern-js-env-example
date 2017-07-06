@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <script src="https://unpkg.com/systemjs@0.20.14/dist/system.js"></script>
+    <script>
+      System.config({
+        baseURL: './',
+        transpiler: 'plugin-babel',
+        map: {
+          'plugin-babel': 'https://unpkg.com/systemjs-plugin-babel@0.0.25/plugin-babel.js',
+          'systemjs-babel-build': 'https://unpkg.com/systemjs-plugin-babel@0.0.25/systemjs-babel-browser.js',
+          'lodash/fp': 'https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)',
+          'jquery': 'https://unpkg.com/jquery@3.2.1/dist/jquery.min.js',
+          'moment': 'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment-with-locales.min.js',
+          'eonasdan-bootstrap-datetimepicker': 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js',
+          'react': 'https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.min.js',
+          'react-dom': 'https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.min.js',
+        },
+        meta: {
+          '*.js': {
+            babelOptions: { react: true }
+          }
+        }
+      });
+      System.import('main.js');
+    </script>
+  </head>
+  <body>
+    <div id="hello"/>
+  </body>
+</html>
